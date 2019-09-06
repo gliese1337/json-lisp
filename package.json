@@ -1,0 +1,32 @@
+{
+  "name": "json-lisp",
+  "version": "1.0.0",
+  "description": "A basic LISP-style interpreter using JSON as the concrete syntax.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "prepare": "npm run build && npm test",
+    "build": "node ./node_modules/typescript/bin/tsc",
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gliese1337/json-lisp.git"
+  },
+  "keywords": [
+    "lisp",
+    "interpreter"
+  ],
+  "author": "Logan R. Kearsley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gliese1337/json-lisp/issues"
+  },
+  "homepage": "https://github.com/gliese1337/json-lisp#readme",
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  }
+}
