@@ -1,6 +1,6 @@
 # json-lisp
 
-JSON-LISP is a very simple LISP interpreter that uses JSON as its concrete syntax; thus, it comes with all the basic JSON data type built-in, and allows for easy integration of LISP-like domain-specific languages into JavaScript applications. Due to the excessive cumbersomeness of writing code in JSON, it is expected that most applications of this library will use it for interpreting auto-generated code of some sort, or API calls, or config files. Although it is possible, it is not expected that humans write large LISP programs by hand in JSON syntax.
+JSON-LISP is a very simple LISP interpreter that uses JSON as its concrete syntax; thus, it comes with all the basic JSON data type built-in, and allows for easy integration of LISP-like domain-specific languages into JavaScript applications. Due to the excessive cumbersomeness of writing code in JSON, it is expected that most applications of this library will use it for interpreting auto-generated code of some sort, or API calls, or config files. Although it is possible, it is not expected that humans write large LISP programs by hand in JSON syntax. JSON-LISP serves as an alternative to [JSON-FORTH](https://www.npmjs.com/package/json-forth) in the simple-DSL space.
 
 JSON-LISP ships with a preamble library of built-in functions and special forms to help get you started, but has no reserved words. All symbols in the default environment can be overwritten by the user of the library or by interpreted code.
 
