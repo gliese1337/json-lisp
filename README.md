@@ -10,6 +10,9 @@ The `Env` constructor has the type `new Env(pairs: [string, unknown][], parent?:
 
 Custom built-in functions supplied in the `bindings` object should be native JavaScript functions, not JSON-LISP lambdas. Normal functions take a single parameter, which is a list of the interpreted arguments provided from JSON-LISP code. Implementations of special forms (i.e., syntax elements which do not evaluate their arguments ahead of time) take three parameters: a list of the unevaluated arguments from JSON-LISP code, a recursive reference to the interpreter internals which takes an `ast` object of any type and an evolution environment of type `Env`, and a reference to the current static environment (also of type `Env`).
 
+#Evaluation order
+JSON-LISP implements strict evaluation. Beyond strictness guarantees, however, the order of argument evaluation is undefined. This is done for improved throughput, as JSON-LISP is also fully aysnchronous; the exported interpreter and the internal interpreter reference passed to built-in function implementations both return `Promises`, the interpreted will take care of resolving all promises generated internally to maintain strictness, and `async` functions, or functions returning promises, are supported for built-in implementations. As a result, multiple argument expressions may end up executing concurrently, so care is recommended if you choose to introduce mutable references (no mutation is provided by the default preamble environment).
+
 #Preamble
 
 The functions and special forms defined in the preamble are as follows:
