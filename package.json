@@ -1,5 +1,5 @@
 {
-  "name": "json-lisp",
+  "name": "json-lisp-dsl",
   "version": "1.0.0",
   "description": "A basic LISP-style interpreter using JSON as the concrete syntax.",
   "main": "dist/index.js",
@@ -18,7 +18,8 @@
   },
   "keywords": [
     "lisp",
-    "interpreter"
+    "interpreter",
+    "dsl"
   ],
   "author": "Logan R. Kearsley",
   "license": "MIT",
