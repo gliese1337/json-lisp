@@ -1,5 +1,8 @@
 import { Env } from './env';
 import { preamble, Operator } from './preamble';
+import { compiler } from "./compiler";
+
+export const Compiler = compiler;
 
 async function apply(op: Operator, env: Env, args: unknown[]): Promise<unknown> {
   return op.length > 1 ?
